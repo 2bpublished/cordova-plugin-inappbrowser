@@ -29,7 +29,7 @@
 #define    kInAppBrowserToolbarBarPositionTop @"top"
 
 #define    TOOLBAR_HEIGHT 44.0
-#define    LOCATIONBAR_HEIGHT 21.0
+#define    LOCATIONBAR_HEIGHT 0.0
 #define    FOOTER_HEIGHT ((TOOLBAR_HEIGHT) + (LOCATIONBAR_HEIGHT))
 
 #pragma mark CDVInAppBrowser
@@ -583,7 +583,7 @@
     self.toolbar.alpha = 0.000;
     self.toolbar.autoresizesSubviews = YES;
     self.toolbar.autoresizingMask = toolbarIsAtBottom ? (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin) : UIViewAutoresizingFlexibleWidth;
-    self.toolbar.barStyle = UIStatusBarStyle;
+    self.toolbar.barStyle = UIBarStyleBlackTranslucent;
     self.toolbar.tintColor = [UIColor whiteColor];
     // self.toolbar.barTintColor = [UIColor colorWithRed:123.0 / 255.0 green:194.0 / 255.0 blue:11.0 / 255.0 alpha:1];
     self.toolbar.clearsContextBeforeDrawing = NO;
