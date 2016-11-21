@@ -589,7 +589,7 @@
     self.toolbar.contentMode = UIViewContentModeScaleToFill;
     self.toolbar.hidden = NO;
     self.toolbar.multipleTouchEnabled = NO;
-    self.toolbar.opaque = NO;
+    self.toolbar.opaque = YES;
     self.toolbar.userInteractionEnabled = YES;
 
     CGFloat labelInset = 5.0;
@@ -621,7 +621,7 @@
     self.addressLabel.shadowOffset = CGSizeMake(0.0, -1.0);
     self.addressLabel.text = NSLocalizedString(@"Loading...", nil);
     self.addressLabel.textAlignment = NSTextAlignmentLeft;
-    self.addressLabel.textColor = [UIColor colorWithWhite:1.000 alpha:1.000];
+    self.addressLabel.textColor = [UIColor colorWithWhite:0.000 alpha:1.000];
     self.addressLabel.userInteractionEnabled = NO;
 
     NSString* frontArrowString = NSLocalizedString(@"►", nil); // create arrow from Unicode char
@@ -636,7 +636,7 @@
 
     [self.toolbar setItems:@[self.closeButton, flexibleSpaceButton, self.backButton, fixedSpaceButton, self.forwardButton]];
     
-    self.view.backgroundColor = [UIColor colorWithRed:0.0 / 255.0 green:255.0 / 255.0 blue:0.0 / 255.0 alpha:1];
+    self.view.backgroundColor = [UIColor colorWithRed:255.0 / 255.0 green:255.0 / 255.0 blue:255.0 / 255.0 alpha:1];
     [self.view addSubview:self.toolbar];
     // [self.view addSubview:self.addressLabel];
     [self.view addSubview:self.spinner];
