@@ -589,7 +589,7 @@
     self.toolbar.contentMode = UIViewContentModeScaleToFill;
     self.toolbar.hidden = NO;
     self.toolbar.multipleTouchEnabled = NO;
-    self.toolbar.opaque = YES;
+    self.toolbar.opaque = NO;
     self.toolbar.userInteractionEnabled = YES;
 
     CGFloat labelInset = 5.0;
@@ -636,7 +636,7 @@
 
     [self.toolbar setItems:@[self.closeButton]];
     
-    self.view.backgroundColor = [UIColor colorWithRed:255.0 / 255.0 green:255.0 / 255.0 blue:255.0 / 255.0 alpha:1];
+    self.view.backgroundColor = [UIColor colorWithRed:255.0 / 255.0 green:255.0 / 255.0 blue:255.0 / 255.0 alpha:0];
     [self.view addSubview:self.toolbar];
     // [self.view addSubview:self.addressLabel];
     [self.view addSubview:self.spinner];
