@@ -635,10 +635,10 @@
     self.backButton.imageInsets = UIEdgeInsetsZero;
 
     [self.toolbar setItems:@[self.closeButton, flexibleSpaceButton, self.backButton, fixedSpaceButton, self.forwardButton]];
-    //
-    self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.view.backgroundColor = [UIColor black];
     [self.view addSubview:self.toolbar];
-    [self.view addSubview:self.addressLabel];
+    // [self.view addSubview:self.addressLabel];
     [self.view addSubview:self.spinner];
 }
 
@@ -654,7 +654,7 @@
     self.closeButton = nil;
     self.closeButton = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStyleBordered target:self action:@selector(close)];
     self.closeButton.enabled = YES;
-    self.closeButton.tintColor = [UIColor colorWithRed:0.0 / 255.0 green:0.0 / 255.0 blue:0.0 / 255.0 alpha:1];
+    self.closeButton.tintColor = [UIColor colorWithRed:0.0 / 255.0 green:255.0 / 255.0 blue:0.0 / 255.0 alpha:1];
 
     NSMutableArray* items = [self.toolbar.items mutableCopy];
     [items replaceObjectAtIndex:0 withObject:self.closeButton];
