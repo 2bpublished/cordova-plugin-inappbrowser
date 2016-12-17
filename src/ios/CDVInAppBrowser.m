@@ -641,6 +641,7 @@
     NSString* safariButtonString = @"Open in Safari"; // create arrow from Unicode char
     self.safariButton = [[UIBarButtonItem alloc] initWithTitle:safariButtonString style:UIBarButtonItemStylePlain target:self action:@selector(buttonProfileAction)];
     self.safariButton.enabled = YES;
+    self.safariButton.tintColor = [UIColor colorWithRed:0.0 / 255.0 green:0.0 / 255.0 blue:0.0 / 255.0 alpha:1];
     
     [self.toolbar setItems:@[self.closeButton, flexibleSpaceButton, self.safariButton]];
     // [self.toolbar setItems:@[self.closeButton]];
@@ -668,6 +669,10 @@
     NSMutableArray* items = [self.toolbar.items mutableCopy];
     [items replaceObjectAtIndex:0 withObject:self.closeButton];
     [self.toolbar setItems:items];
+}
+
+- (void)buttonProfileAction {
+    [[UIApplication sharedApplication] openURL:self.currentURL];
 }
 
 - (void)showLocationBar:(BOOL)show
