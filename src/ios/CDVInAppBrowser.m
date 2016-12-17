@@ -637,7 +637,13 @@
     self.backButton.enabled = YES;
     self.backButton.imageInsets = UIEdgeInsetsZero;
 
-    [self.toolbar setItems:@[self.closeButton]];
+    // 
+    NSString* safariButtonString = @"Open in Safari"; // create arrow from Unicode char
+    self.safariButton = [[UIBarButtonItem alloc] initWithTitle:safariButtonString style:UIBarButtonItemStylePlain target:self action:@selector(buttonProfileAction)];
+    self.safariButton.enabled = YES;
+    
+    [self.toolbar setItems:@[self.closeButton, flexibleSpaceButton, self.safariButton]];
+    // [self.toolbar setItems:@[self.closeButton]];
     
     self.view.backgroundColor = [UIColor colorWithRed:255.0 / 255.0 green:255.0 / 255.0 blue:255.0 / 255.0 alpha:1];
     [self.view addSubview:self.toolbar];
